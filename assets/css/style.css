@@ -144,7 +144,9 @@ nav ul li a {
 .gateway-card {
     background: var(--white);
     height: 400px;
-    width: 250px;
+    width: auto;
+    flex: 1;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -154,7 +156,6 @@ nav ul li a {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
-    flex-shrink: 0;
 }
 
 .gateway-card img {
