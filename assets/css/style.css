@@ -68,19 +68,52 @@ nav ul li a {
 }
 
 /* Hero Section */
-.hero {
-    height: 80vh;
-    background: linear-gradient(rgba(15, 76, 117, 0.6), rgba(46, 196, 182, 0.4)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
+.hero-slideshow {
+    position: relative;
+    height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    background: #000; /* Μαύρο background για cinematic look */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
     text-align: center;
     color: var(--white);
 }
 
-.hero h1 {
+.gallery-track img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeZoom 54s infinite; /* Συνολική διάρκεια 54000ms για κύκλο με 9 εικόνες */
+}
+
+.gallery-track img:nth-child(1) { animation-delay: 0s; }     /* 0ms */
+.gallery-track img:nth-child(2) { animation-delay: 6s; }    /* 6000ms */
+.gallery-track img:nth-child(3) { animation-delay: 12s; }   /* 12000ms */
+.gallery-track img:nth-child(4) { animation-delay: 18s; }   /* 18000ms */
+.gallery-track img:nth-child(5) { animation-delay: 24s; }   /* 24000ms */
+.gallery-track img:nth-child(6) { animation-delay: 30s; }   /* 30000ms */
+.gallery-track img:nth-child(7) { animation-delay: 36s; }   /* 36000ms */
+.gallery-track img:nth-child(8) { animation-delay: 42s; }   /* 42000ms */
+.gallery-track img:nth-child(9) { animation-delay: 48s; }   /* 48000ms */
+
+@keyframes fadeZoom {
+    0%   { opacity: 0; transform: scale(1); }       /* Fade in start */
+    3%   { opacity: 1; }                           /* Fade in complete (3% του 54s ≈ 1.62s) */
+    15%  { opacity: 1; }                           /* Hold visible (15% ≈ 8.1s) */
+    18%  { opacity: 0; transform: scale(1.05); }   /* Fade out start με zoom (18% ≈ 9.72s) */
+    100% { opacity: 0; }                           /* Fade out complete */
+}
+
+.hero-slideshow h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     margin-bottom: 20px;
