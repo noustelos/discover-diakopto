@@ -174,6 +174,24 @@ nav ul li a {
     box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
+/* Vertical Banner */
+.vertical-banner {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    background: var(--bronze);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
 /* Gallery Section */
 .gallery {
     padding: 80px 5%;
