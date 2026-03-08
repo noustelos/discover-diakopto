@@ -183,7 +183,7 @@ nav ul li a {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--white);
+    color: var(--bronze);
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 14px;
