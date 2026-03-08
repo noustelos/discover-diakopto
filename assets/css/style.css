@@ -177,10 +177,12 @@ nav ul li a {
 /* Vertical Banner */
 .vertical-banner {
     position: fixed;
-    left: 20px;
+    left: 10px;
     top: 50%;
     transform: translateY(-50%) rotate(-90deg);
-    background: var(--bronze);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--white);
     padding: 10px 20px;
     border-radius: 5px;
