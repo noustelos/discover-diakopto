@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Λογική για το Vertical Banner (υπήρχε ήδη) ---
     const banner = document.querySelector('.vertical-banner');
     const footer = document.querySelector('.main-footer');
 
@@ -35,5 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', handleScroll);
         // Initial check in case the page loads in a scrolled state
         handleScroll();
+    }
+
+    // --- Νέα Λογική για το Mobile Menu ---
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    if (menuToggle && nav) {
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('nav-open');
+        });
     }
 });
