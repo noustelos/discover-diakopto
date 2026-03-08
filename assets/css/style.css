@@ -139,11 +139,14 @@ nav ul li a {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     margin-top: -50px; /* Για να "πατάνε" πάνω στο Hero */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .gateway-card {
     background: var(--white);
-    height: 350px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -157,7 +160,7 @@ nav ul li a {
 
 .gateway-card img {
     width: 100%;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
 }
 
