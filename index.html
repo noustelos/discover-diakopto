@@ -6,9 +6,96 @@
     <title>Discover Diakopto | Εκεί που το βουνό συναντά τη θάλασσα</title>
     <meta name="description" content="Εξερευνήστε το Διακοπτό, τον Οδοντωτό και το Φαράγγι του Βουραϊκού.">
     
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="assets/images/sea1.webp" as="image" type="image/webp">
     
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+    :root {
+      --deep-night: #0C1117;
+      --mist: #F1F1F1;
+      --bronze: #A58A5B;
+      --glass: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --sage: #4B5D4B;
+      --primary-blue: #0F4C75;
+    }
+    
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
+    
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background: var(--deep-night); 
+      color: var(--mist); 
+      overflow-x: hidden; 
+    }
+    
+    /* Header Styles */
+    .main-header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      padding: 30px 8%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1000;
+      background: linear-gradient(to bottom, rgba(15, 76, 117, 0.9), rgba(15, 76, 117, 0.3));
+    }
+    
+    .logo { 
+      font-size: 0.8rem; 
+      letter-spacing: 3px; 
+      text-transform: uppercase; 
+    }
+    
+    .logo span { 
+      color: var(--bronze); 
+      font-weight: 900; 
+    }
+    
+    .gateways {
+      margin-top: 0;
+      background: white;
+      padding-top: 50px;
+    }
+    
+    .gateway-card h3 {
+      color: var(--sage);
+    }
+    
+    .gateway-card {
+      border-top: 1px solid var(--sage);
+    }
+    
+    .gateway-card:hover {
+      box-shadow: 0 4px 8px rgba(75, 93, 75, 0.5);
+    }
+    
+    .gallery-track img:first-child {
+      animation: fadeZoomFirst 54s infinite;
+    }
+    
+    @keyframes fadeZoomFirst {
+      0% { opacity: 1; transform: scale(1); }
+      15% { opacity: 1; }
+      18% { opacity: 0; transform: scale(1.05); }
+      100% { opacity: 0; }
+    }
+    
+    .hero-slideshow {
+      background: transparent;
+      background-image: url('assets/images/sea1.webp');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+    </style>
 </head>
 <body>
 
