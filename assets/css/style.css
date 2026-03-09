@@ -1,47 +1,62 @@
-/* Variables - Τα χρώματα που συμφωνήσαμε */
 :root {
-    --primary-blue: #0F4C75;
-    --turquoise: #2EC4B6;
-    --sand: #F4F1EC;
-    --white: #ffffff;
-    --text-dark: #333;
+  --deep-aegean-blue: #0F4C75;
+  --turquoise: #2EC4B6;
+  --sand-beige: #F4F1EC;
+  --dark-gray: #334155;
+  --white: #ffffff;
 }
 
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
 }
 
-body {
+body { 
+  font-family: 'Inter', sans-serif; 
+  background: var(--sand-beige); 
+  color: var(--dark-gray); 
+  overflow-x: hidden; 
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: var(--text-dark);
-    background-color: var(--white);
+}
+
+.about-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--deep-aegean-blue);
+    margin-bottom: 20px;
 }
 
 /* Header */
 .main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    position: absolute;
-    width: 100%;
-    z-index: 100;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 30px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: linear-gradient(to bottom, rgba(15, 76, 117, 0.9), rgba(15, 76, 117, 0.3));
 }
 
-.logo {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--white);
+.logo { 
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--white);
+  letter-spacing: 3px; 
+  text-transform: uppercase; 
 }
 
-.logo span {
-    font-weight: 300;
-    letter-spacing: 2px;
+.logo span { 
+  color: var(--deep-aegean-blue); 
+  font-weight: 900; 
 }
 
 nav ul {
@@ -67,11 +82,10 @@ nav ul li a {
     border-radius: 4px;
 }
 
-/* Hamburger Menu Icon - Hidden on Desktop */
 .menu-toggle {
-    display: none; /* Κρυφό σε desktop */
+    display: none;
     cursor: pointer;
-    z-index: 1001; /* Πάνω από όλα τα άλλα στοιχεία */
+    z-index: 1001;
     background: none;
     border: none;
     padding: 0;
@@ -79,14 +93,27 @@ nav ul li a {
 
 /* Hero Section */
 .hero-slideshow {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: #000; /* Μαύρο background για cinematic look */
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url('../images/sea1.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.hero-slideshow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
 }
 
 .hero-content {
@@ -96,31 +123,40 @@ nav ul li a {
     color: var(--white);
 }
 
+.gallery-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 .gallery-track img {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
     object-fit: cover;
     opacity: 0;
-    animation: fadeZoom 54s infinite; /* Συνολική διάρκεια 54000ms για κύκλο με 9 εικόνες */
+    animation: fadeZoom 54s infinite;
 }
 
-.gallery-track img:nth-child(1) { animation-delay: 0s; }     /* 0ms */
-.gallery-track img:nth-child(2) { animation-delay: 6s; }    /* 6000ms */
-.gallery-track img:nth-child(3) { animation-delay: 12s; }   /* 12000ms */
-.gallery-track img:nth-child(4) { animation-delay: 18s; }   /* 18000ms */
-.gallery-track img:nth-child(5) { animation-delay: 24s; }   /* 24000ms */
-.gallery-track img:nth-child(6) { animation-delay: 30s; }   /* 30000ms */
-.gallery-track img:nth-child(7) { animation-delay: 36s; }   /* 36000ms */
-.gallery-track img:nth-child(8) { animation-delay: 42s; }   /* 42000ms */
-.gallery-track img:nth-child(9) { animation-delay: 48s; }   /* 48000ms */
+.gallery-track img:nth-child(1) { animation-delay: 0s; }
+.gallery-track img:nth-child(2) { animation-delay: 6s; }
+.gallery-track img:nth-child(3) { animation-delay: 12s; }
+.gallery-track img:nth-child(4) { animation-delay: 18s; }
+.gallery-track img:nth-child(5) { animation-delay: 24s; }
+.gallery-track img:nth-child(6) { animation-delay: 30s; }
+.gallery-track img:nth-child(7) { animation-delay: 36s; }
+.gallery-track img:nth-child(8) { animation-delay: 42s; }
+.gallery-track img:nth-child(9) { animation-delay: 48s; }
 
 @keyframes fadeZoom {
-    0%   { opacity: 0; transform: scale(1); }       /* Fade in start */
-    3%   { opacity: 1; }                           /* Fade in complete (3% του 54s ≈ 1.62s) */
-    15%  { opacity: 1; }                           /* Hold visible (15% ≈ 8.1s) */
-    18%  { opacity: 0; transform: scale(1.05); }   /* Fade out start με zoom (18% ≈ 9.72s) */
-    100% { opacity: 0; }                           /* Fade out complete */
+    0%   { opacity: 0; transform: scale(1); }
+    3%   { opacity: 1; }
+    15%  { opacity: 1; }
+    18%  { opacity: 0; transform: scale(1.05); }
+    100% { opacity: 0; }
 }
 
 .hero-slideshow h1 {
@@ -142,115 +178,10 @@ nav ul li a {
     transition: 0.3s;
 }
 
-/* Gateways Section */
-.gateways {
-    padding: 50px 5%;
-}
-
-.gateways .container {
-    display: flex;
-    justify-content: center;
-    gap: 10px 15px;
-    flex-wrap: wrap;
-    max-width: 735px;
-    margin: 0 auto;
-}
-
-.gateway-card {
-    background: var(--white);
-    height: 360px;
-    width: 360px;
-    max-width: 360px;
-    min-width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    border-radius: 15px;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden;
-}
-
-.gateway-card img {
-    width: 100%;
-    height: 225px;
-    object-fit: cover;
-}
-
-.gateway-card h3 {
-    padding: 20px;
-    margin: 0;
-}
-
-.gateway-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
-
-/* Vertical Banner */
-.vertical-banner {
-    position: fixed;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%) rotate(-90deg);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--bronze);
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    z-index: 100;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-/* Gallery Section */
-.gallery {
-    padding: 80px 5%;
-    background-color: var(--sand);
-}
-
-.section-title {
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: var(--primary-blue);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    max-width: 740px;
-    margin: 0 auto;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 275px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: 0.4s;
-    filter: grayscale(20%);
-}
-
-.gallery-item img:hover {
-    filter: grayscale(0%);
-    transform: scale(1.1);
-}
-
 /* About Diakopto Section */
 .about-section {
-    background-color: var(--sand);
-    padding: 80px 20px;
+    background-color: var(--sand-beige);
+    padding: 100px 20px;
     text-align: center;
 }
 
@@ -260,14 +191,6 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.about-quote {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 22px;
-    color: var(--primary-blue);
-    margin-bottom: 20px;
 }
 
 .about-label {
@@ -283,7 +206,7 @@ nav ul li a {
 .about-title {
     font-family: 'Playfair Display', serif;
     font-size: 38px;
-    color: var(--primary-blue);
+    color: var(--deep-aegean-blue);
     margin-bottom: 20px;
     line-height: 1.2;
 }
@@ -308,20 +231,120 @@ nav ul li a {
     margin: 30px auto;
 }
 
+/* Experiences Grid */
+.experiences-grid {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.experiences-grid .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.experience-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--dark-gray);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.experience-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.experience-card h3 {
+    padding: 20px 20px 10px;
+    font-size: 1.4rem;
+    color: var(--deep-aegean-blue);
+}
+
+.experience-card p {
+    padding: 0 20px 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--turquoise);
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 20px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--deep-aegean-blue);
+}
+
 /* Tagline Section */
 .tagline {
     padding: 80px 20px;
-    background: linear-gradient(45deg, var(--turquoise), var(--primary-blue));
+    background: linear-gradient(45deg, var(--turquoise), var(--deep-aegean-blue));
     text-align: center;
 }
 
 .tagline h2 {
-    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
+    letter-spacing: 2px;
     color: var(--white);
     font-weight: 500;
 }
 
+/* Gallery Section */
+.gallery {
+    padding: 80px 5%;
+    background-color: var(--sand-beige);
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--deep-aegean-blue);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.4s;
+    filter: grayscale(20%);
+}
+
+.gallery-item img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
 
 /* Featured Spots Section */
 .featured-spots {
@@ -342,6 +365,7 @@ nav ul li a {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
 }
 
 .featured-card img {
@@ -373,7 +397,7 @@ nav ul li a {
 
 /* Footer */
 .main-footer {
-    background-color: var(--primary-blue);
+    background-color: var(--deep-aegean-blue);
     color: var(--white);
     padding: 60px 5% 20px;
 }
@@ -392,7 +416,7 @@ nav ul li a {
     opacity: 0.8;
 }
 
-.footer-links h4, .footer-social h4 {
+.footer-links h4, .footer-social h4, .footer-newsletter h4 {
     margin-bottom: 20px;
     font-family: 'Playfair Display', serif;
 }
@@ -414,6 +438,18 @@ nav ul li a {
     padding-left: 5px;
 }
 
+.social-icons a {
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 15px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 1;
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 20px;
@@ -421,7 +457,6 @@ nav ul li a {
     opacity: 0.6;
 }
 
-/* Footer Newsletter */
 .newsletter-form {
     display: flex;
     margin-top: 15px;
@@ -445,7 +480,7 @@ nav ul li a {
     padding: 12px 20px;
     border: 1px solid var(--turquoise);
     background: var(--turquoise);
-    color: var(--primary-blue);
+    color: var(--deep-aegean-blue);
     font-weight: 600;
     cursor: pointer;
     border-radius: 0 4px 4px 0;
@@ -457,11 +492,10 @@ nav ul li a {
     color: var(--turquoise);
 }
 
-/* Προσαρμογές για Κινητά (Responsive) */
+/* Responsive */
 @media (max-width: 768px) {
-    /* Header & Nav for Mobile */
     .menu-toggle {
-        display: flex; /* Εμφάνιση σε mobile */
+        display: flex;
         flex-direction: column;
         gap: 5px;
     }
@@ -475,10 +509,9 @@ nav ul li a {
     }
 
     .main-header nav, .main-header .lang-switch {
-        display: none; /* Απόκρυψη πλοήγησης & γλώσσας σε mobile */
+        display: none;
     }
 
-    /* Εμφάνιση και στυλ του μενού όταν είναι ανοιχτό (με JS class 'nav-open') */
     nav.nav-open {
         display: block;
         position: fixed;
@@ -486,7 +519,7 @@ nav ul li a {
         right: 0;
         width: 80%;
         height: 100vh;
-        background-color: var(--primary-blue);
+        background-color: var(--deep-aegean-blue);
         z-index: 1000;
         padding-top: 60px;
     }
@@ -501,14 +534,6 @@ nav ul li a {
         margin-left: 0;
     }
 
-    .gateways .container {
-        gap: 20px; /* Ενιαίο κενό για την κάθετη στοίχιση */
-    }
-    .gateway-card {
-        width: 100%; /* Οι κάρτες πιάνουν όλο το πλάτος για να στοιβάζονται */
-    }
-
-    /* About Section Mobile */
     .about-section {
         padding: 60px 20px;
     }

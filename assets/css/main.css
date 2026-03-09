@@ -1,0 +1,28 @@
+:root {
+  --deep-aegean-blue: #0F4C75;
+  --turquoise: #2EC4B6;
+  --sand-beige: #F4F1EC;
+  --dark-gray: #334155;
+}
+
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body { 
+  font-family: 'Inter', sans-serif; 
+  background: var(--sand-beige); 
+  color: var(--dark-gray); 
+  overflow-x: hidden; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}

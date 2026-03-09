@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Odontotos Rail-Biking",
+    "date": "2024-07-15",
+    "description": "A unique rail-biking experience on the historic Odontotos railway tracks. A guided tour through the beautiful Vouraikos Gorge.",
+    "image": "assets/images/m1.webp"
+  },
+  {
+    "title": "Vouraikos Gorge Hiking Festival",
+    "date": "2024-08-05",
+    "description": "Join the annual hiking festival and explore the stunning Vouraikos Gorge with fellow nature lovers.",
+    "image": "assets/images/m2.webp"
+  },
+  {
+    "title": "Diakopto Beach Party",
+    "date": "2024-08-15",
+    "description": "The biggest beach party of the summer with live music, DJs, and fireworks at Diakopto beach.",
+    "image": "assets/images/sea1.webp"
+  }
+]

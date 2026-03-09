@@ -1,0 +1,57 @@
+/* Header Styles */
+.main-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30px 8%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  background: transparent;
+}
+
+.experiences-grid {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.experiences-grid .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-slideshow {
+  position: relative;
+  background: transparent;
+  background-image: url('../images/sea1.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.hero-slideshow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.about-section {
+    background: var(--sand-beige);
+    padding: 100px 0;
+}
+
+.tagline {
+    background: linear-gradient(to right, var(--turquoise), var(--deep-aegean-blue));
+    padding: 60px 0;
+    text-align: center;
+    color: #fff;
+}
