@@ -48,6 +48,16 @@ h1, h2, h3, h4, h5, h6 {
 .logo { 
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #FFD700; /* Bright gold for entire logo */
+}
+
+.logo span { 
+  color: #FFD700; /* Bright gold, same as logo */
+  font-weight: 900;
+}
   font-size: 1.5rem;
   color: var(--white);
   letter-spacing: 3px; 
@@ -164,6 +174,15 @@ nav ul li a {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     margin-bottom: 20px;
+    letter-spacing: 5px; /* Increased letter spacing */
+}
+
+.hero-slideshow p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.8rem; /* Increased font size */
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
 }
 
 .btn {
