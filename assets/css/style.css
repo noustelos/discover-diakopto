@@ -145,7 +145,6 @@ nav ul li a {
 /* Gateways Section */
 .gateways {
     padding: 50px 5%;
-    margin-top: -50px; /* Για να "πατάνε" πάνω στο Hero */
 }
 
 .gateways .container {
@@ -228,7 +227,7 @@ nav ul li a {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     max-width: 740px;
     margin: 0 auto;
@@ -246,6 +245,130 @@ nav ul li a {
 .gallery-item img:hover {
     filter: grayscale(0%);
     transform: scale(1.1);
+}
+
+/* About Diakopto Section */
+.about-section {
+    background-color: var(--sand);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.about-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--turquoise);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.about-body {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #334155;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.about-body p {
+    margin-bottom: 15px;
+}
+
+.about-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--turquoise);
+    margin: 30px auto;
+}
+
+/* Tagline Section */
+.tagline {
+    padding: 80px 20px;
+    background: linear-gradient(45deg, var(--turquoise), var(--primary-blue));
+    text-align: center;
+}
+
+.tagline h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 500;
+}
+
+
+/* Featured Spots Section */
+.featured-spots {
+    padding: 80px 5%;
+    background-color: var(--white);
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.featured-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.featured-card:hover img {
+    transform: scale(1.05);
+}
+
+.featured-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: var(--white);
+}
+
+.featured-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin: 0;
 }
 
 /* Footer */
@@ -298,6 +421,42 @@ nav ul li a {
     opacity: 0.6;
 }
 
+/* Footer Newsletter */
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.newsletter-form input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.newsletter-form button {
+    padding: 12px 20px;
+    border: 1px solid var(--turquoise);
+    background: var(--turquoise);
+    color: var(--primary-blue);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+    background: transparent;
+    color: var(--turquoise);
+}
+
 /* Προσαρμογές για Κινητά (Responsive) */
 @media (max-width: 768px) {
     /* Header & Nav for Mobile */
@@ -347,5 +506,18 @@ nav ul li a {
     }
     .gateway-card {
         width: 100%; /* Οι κάρτες πιάνουν όλο το πλάτος για να στοιβάζονται */
+    }
+
+    /* About Section Mobile */
+    .about-section {
+        padding: 60px 20px;
+    }
+
+    .about-title {
+        font-size: 30px;
+    }
+
+    .about-body {
+        font-size: 16px;
     }
 }
