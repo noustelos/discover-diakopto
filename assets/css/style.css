@@ -55,7 +55,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo span { 
-  color: var(--deep-aegean-blue); 
+  color: transparent; 
+  -webkit-text-stroke: 1px var(--white);
   font-weight: 900; 
 }
 
