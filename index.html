@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Diakopto | Travel Guide to Diakopto Achaia</title>
     <meta name="description" content="Discover Diakopto in Achaia, Greece. Explore the Odontotos railway, the Vouraikos Gorge, beautiful beaches and authentic local experiences.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://discoverdiakopto.gr/">
+    <link rel="alternate" hreflang="el" href="https://discoverdiakopto.gr/">
+    <link rel="alternate" hreflang="en" href="https://discoverdiakopto.gr/en/">
+    <link rel="alternate" hreflang="x-default" href="https://discoverdiakopto.gr/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="el_GR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:title" content="Discover Diakopto | Travel Guide to Diakopto Achaia">
+    <meta property="og:description" content="Discover Diakopto in Achaia, Greece. Explore the Odontotos railway, the Vouraikos Gorge, beautiful beaches and authentic local experiences.">
+    <meta property="og:url" content="https://discoverdiakopto.gr/">
+    <meta property="og:image" content="https://discoverdiakopto.gr/assets/images/sea1.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discover Diakopto | Travel Guide to Diakopto Achaia">
+    <meta name="twitter:description" content="Discover Diakopto in Achaia, Greece. Explore the Odontotos railway, the Vouraikos Gorge, beautiful beaches and authentic local experiences.">
+    <meta name="twitter:image" content="https://discoverdiakopto.gr/assets/images/sea1.webp">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&family=Poppins:wght@700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     
@@ -12,6 +28,46 @@
     
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/baguetteBox.min.css">
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "@id": "https://discoverdiakopto.gr/#website",
+                    "url": "https://discoverdiakopto.gr/",
+                    "name": "Discover Diakopto",
+                    "inLanguage": "el",
+                    "description": "Discover Diakopto in Achaia, Greece. Explore the Odontotos railway, the Vouraikos Gorge, beautiful beaches and authentic local experiences.",
+                    "publisher": {
+                        "@id": "https://discoverdiakopto.gr/#organization"
+                    }
+                },
+                {
+                    "@type": "Organization",
+                    "@id": "https://discoverdiakopto.gr/#organization",
+                    "name": "Discover Diakopto",
+                    "url": "https://discoverdiakopto.gr/",
+                    "logo": "https://discoverdiakopto.gr/assets/images/sea1.webp"
+                },
+                {
+                    "@type": "TouristDestination",
+                    "@id": "https://discoverdiakopto.gr/#destination",
+                    "name": "Diakopto",
+                    "description": "Παραθαλάσσιος προορισμός στην Αχαΐα με τον Οδοντωτό, το Φαράγγι του Βουραϊκού και παραλίες.",
+                    "url": "https://discoverdiakopto.gr/",
+                    "image": "https://discoverdiakopto.gr/assets/images/sea1.webp",
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 38.193,
+                        "longitude": 22.201
+                    },
+                    "touristType": "Nature lovers, families, weekend travelers"
+                }
+            ]
+        }
+        </script>
     
 </head>
 <body>
@@ -36,7 +92,7 @@
     <section class="hero-slideshow">
         <div class="hero-content">
             <h1>Discover Diakopto</h1>
-            <p>Διακοπτό Αχαΐας: Εκεί που το φαράγγι του Βουραϊκού καταλήγει στο κύμα</p>
+            <p>Where Mountains Meet the Sea</p>
             <a href="#" class="btn">Ανακαλύψτε</a>
         </div>
         <div class="gallery-track">
@@ -71,6 +127,7 @@
                 <img src="assets/images/d1.webp" alt="Οδοντωτός">
                 <h3>Οδοντωτός</h3>
                 <p>Μια αξέχαστη διαδρομή με τον ιστορικό σιδηρόδρομο.</p>
+                <span class="cta-button">Book Your Tickets</span>
             </a>
             <a href="#" class="experience-card">
                 <img src="assets/images/m1.webp" alt="Φαράγγι">
@@ -80,7 +137,7 @@
             <a href="#" class="experience-card">
                 <img src="assets/images/sea1.webp" alt="Παραλίες">
                 <h3>Παραλίες</h3>
-                <p>Απολαύajte τον ήλιο και τη θάλασσα στις πανέμορφες παραλίες μας.</p>
+                <p>Απολαύστε τον ήλιο και τη θάλασσα στις πανέμορφες παραλίες μας.</p>
             </a>
             <a href="#" class="experience-card">
                 <img src="assets/images/m2.webp" alt="Τοπική Ζωή">
@@ -128,6 +185,50 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="content">
+        <h2>Featured Locations (Data)</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Τα παρακάτω σημεία φορτώνονται από το JSON για επαναχρησιμοποίηση σε σελίδες και landing pages.</p>
+        <div class="data-grid" data-locations-list></div>
+        <div class="partner-cta" data-odontotos-cta></div>
+    </section>
+
+    <section class="content" id="blog">
+        <h2>Blog</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Θεματολογία: Ιστορία, Μυθολογία, Τοπικές Παραδόσεις και insider οδηγοί.</p>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <h3>Mythology of Vouraikos</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Placeholder κείμενο μέχρι να προστεθεί το τελικό άρθρο.</p>
+                <div class="context-links">
+                    <a href="plan-your-visit.html">Plan Your Visit</a>
+                    <a href="eat-drink.html">Eat &amp; Drink</a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <h3>Local Traditions of Aigialeia</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices mauris nec justo placerat.</p>
+                <div class="context-links">
+                    <a href="plan-your-visit.html">Plan Your Visit</a>
+                    <a href="eat-drink.html">Eat &amp; Drink</a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <h3>Insider Guide: Odontotos Day Trip</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum velit ut lorem luctus commodo.</p>
+                <div class="context-links">
+                    <a href="plan-your-visit.html">Plan Your Visit</a>
+                    <a href="eat-drink.html">Eat &amp; Drink</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="content">
+        <h2>Events Snapshot (Data)</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ενδεικτική ενότητα με δυναμικά events από το `data/events.json`.</p>
+        <div class="data-grid" data-events-list></div>
     </section>
 
     <footer class="main-footer">

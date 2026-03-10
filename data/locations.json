@@ -1,1 +1,30 @@
-{}
+[
+	{
+		"name": "Odontotos Railway",
+		"category": "train",
+		"summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Historic train route through the Vouraikos Gorge.",
+		"image": "https://picsum.photos/seed/odontotos/900/650",
+		"link": "https://www.odontotos.gr"
+	},
+	{
+		"name": "Vouraikos Gorge",
+		"category": "nature",
+		"summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scenic hiking route with mountain and river views.",
+		"image": "https://picsum.photos/seed/vouraikos/900/650",
+		"link": "explore.html"
+	},
+	{
+		"name": "Diakopto Beach",
+		"category": "beach",
+		"summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Family-friendly shore with easy access and clear waters.",
+		"image": "https://picsum.photos/seed/diakopto-beach/900/650",
+		"link": "beaches.html"
+	},
+	{
+		"name": "Pounta",
+		"category": "beach",
+		"summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Wide coastline perfect for sunset walks.",
+		"image": "https://picsum.photos/seed/pounta/900/650",
+		"link": "beaches.html"
+	}
+]

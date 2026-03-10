@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const galleryGrid = document.querySelector('.gallery-grid');
-    const galleryDataUrl = 'data/gallery.json';
-    const galleryTemplateUrl = 'components/gallery-grid.html';
+    const inEnglishFolder = window.location.pathname.includes('/en/');
+    const galleryDataUrl = inEnglishFolder ? '../data/gallery.json' : 'data/gallery.json';
+    const galleryTemplateUrl = inEnglishFolder ? '../components/gallery-grid.html' : 'components/gallery-grid.html';
 
     if (galleryGrid) {
         Promise.all([
@@ -17,7 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     .replace('{alt}', item.alt);
             });
             galleryGrid.innerHTML = galleryHtml;
-            baguetteBox.run('.gallery-grid');
+            if (typeof baguetteBox !== 'undefined') {
+                baguetteBox.run('.gallery-grid');
+            }
         })
         .catch(error => console.error('Error loading gallery:', error));
     }
