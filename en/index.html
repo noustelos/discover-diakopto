@@ -26,7 +26,8 @@
     
     <link rel="preload" href="../assets/images/sea1.webp" as="image" type="image/webp">
     
-        <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/baguetteBox.min.css">
 
         <script type="application/ld+json">
         {
@@ -119,39 +120,114 @@
         </div>
     </section>
 
-    <section class="gateways">
+    <section class="experiences-grid">
         <div class="container">
-            <div class="gateway-card">
+            <a href="https://www.odontotos.gr" class="experience-card" target="_blank" rel="noopener">
                 <img src="../assets/images/d1.webp" alt="Odontotos">
                 <h3>Odontotos</h3>
-            </div>
-            <div class="gateway-card">
+                <p>An unforgettable route on the historic mountain railway.</p>
+                <span class="cta-button">Book Your Tickets</span>
+            </a>
+            <a href="#" class="experience-card">
                 <img src="../assets/images/m1.webp" alt="Gorge">
                 <h3>Gorge</h3>
-            </div>
-            <div class="gateway-card">
+                <p>Hiking and discovery through the spectacular Vouraikos Gorge.</p>
+            </a>
+            <a href="#" class="experience-card">
                 <img src="../assets/images/sea1.webp" alt="Beaches">
                 <h3>Beaches</h3>
-            </div>
-            <div class="gateway-card">
+                <p>Enjoy seaside moments across the coastal side of Diakopto.</p>
+            </a>
+            <a href="#" class="experience-card">
                 <img src="../assets/images/m2.webp" alt="Tastes">
-                <h3>Tastes</h3>
-            </div>
+                <h3>Local Life</h3>
+                <p>Discover authentic tastes and warm local hospitality.</p>
+            </a>
         </div>
     </section>
 
-    <div class="vertical-banner">
-        created by WebHostPro
-    </div>
+    <section class="tagline">
+        <h2>Sea • Nature • Adventure</h2>
+    </section>
 
     <section class="gallery">
         <h2 class="section-title">Moments from Diakopto</h2>
         <div class="gallery-grid">
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?auto=format&fit=crop&w=600&q=80" alt="Odontotos Train"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Pounta Beach"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Vouraikos Gorge"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=600&q=80" alt="Nature"></div>
         </div>
+    </section>
+
+    <section class="featured-spots">
+        <h2 class="section-title">Featured Spots</h2>
+        <div class="featured-grid">
+            <div class="featured-card">
+                <img src="../assets/images/m5.webp" alt="Odontotos">
+                <div class="featured-content">
+                    <h3>Odontotos</h3>
+                </div>
+            </div>
+            <div class="featured-card">
+                <img src="../assets/images/m1.webp" alt="Vouraikos Gorge">
+                <div class="featured-content">
+                    <h3>Vouraikos Gorge</h3>
+                </div>
+            </div>
+            <div class="featured-card">
+                <img src="../assets/images/sea1.webp" alt="Diakopto Beach">
+                <div class="featured-content">
+                    <h3>Diakopto Beach</h3>
+                </div>
+            </div>
+            <div class="featured-card">
+                <img src="../assets/images/sea2.webp" alt="Pounta Beach">
+                <div class="featured-content">
+                    <h3>Pounta Beach</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <h2>Featured Locations (Data)</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. The locations below are loaded from JSON for reuse across pages and landing sections.</p>
+        <div class="data-grid" data-locations-list></div>
+        <div class="partner-cta" data-odontotos-cta></div>
+    </section>
+
+    <section class="content" id="blog">
+        <h2>Blog</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Topics include History, Mythology, Local Traditions and insider guides.</p>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <h3>Mythology of Vouraikos</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placeholder copy until the final article is added.</p>
+                <div class="context-links">
+                    <a href="plan-your-visit.html">Plan Your Visit</a>
+                    <a href="eat-drink.html">Eat &amp; Drink</a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <h3>Local Traditions of Aigialeia</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices mauris nec justo placerat.</p>
+                <div class="context-links">
+                    <a href="plan-your-visit.html">Plan Your Visit</a>
+                    <a href="eat-drink.html">Eat &amp; Drink</a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <h3>Insider Guide: Odontotos Day Trip</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum velit ut lorem luctus commodo.</p>
+                <div class="context-links">
+                    <a href="plan-your-visit.html">Plan Your Visit</a>
+                    <a href="eat-drink.html">Eat &amp; Drink</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="content">
+        <h2>Events Snapshot (Data)</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A dynamic events section loaded from <code>data/events.json</code>.</p>
+        <div class="data-grid" data-events-list></div>
     </section>
 
     <footer class="main-footer">
@@ -175,6 +251,13 @@
                     <a href="#">IG</a>
                 </div>
             </div>
+            <div class="footer-newsletter">
+                <h4>Join the Diakopto Crew</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email...">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Discover Diakopto. With love for our place.</p>
@@ -182,5 +265,7 @@
     </footer>
 
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/baguetteBox.min.js"></script>
+    <script src="../assets/js/gallery.js"></script>
 </body>
 </html>
